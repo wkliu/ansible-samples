@@ -1,0 +1,35 @@
+print("<user-mapping>")
+for user in range(63):
+   if user < 31:
+     if user < 10:
+       print("   <authorize username=\"user0"+str(user)+"\" password=\"cisco123\">")
+       print("     <connection name=\"RDP\">")
+       print("       <protocol>rdp</protocol>")
+       print("       <param name=\"hostname\">10.10.85."+str(10+user)+"</param>")
+       print("       <param name=\"port\">3389</param>")
+       print("       <param name=\"username\">cisco</param>")
+       print("       <param name=\"password\">cisco123</param>")
+       print("     </connection>")
+       print("   </authorize>")
+     else:
+       print("   <authorize username=\"user"+str(user)+"\" password=\"cisco123\">")
+       print("     <connection name=\"RDP\">")
+       print("       <protocol>rdp</protocol>")
+       print("       <param name=\"hostname\">10.10.85."+str(10+user)+"</param>")
+       print("       <param name=\"port\">3389</param>")
+       print("       <param name=\"username\">cisco</param>")
+       print("       <param name=\"password\">cisco123</param>")
+       print("     </connection>")
+       print("   </authorize>")
+   else:
+       print("   <authorize username=\"user"+str(user)+"\" password=\"cisco123\">")
+       print("     <connection name=\"RDP\">")
+       print("       <protocol>rdp</protocol>")
+       print("       <param name=\"hostname\">10.10.86."+str(user-20)+"</param>")
+       print("       <param name=\"port\">3389</param>")
+       print("       <param name=\"username\">cisco</param>")
+       print("       <param name=\"password\">cisco123</param>")
+       print("     </connection>")
+       print("   </authorize>")
+
+print("</user-mapping>") 
