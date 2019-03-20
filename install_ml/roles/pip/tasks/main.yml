@@ -1,0 +1,3 @@
+- pip:
+   name: "{{package}}"
+   executable: pip3 

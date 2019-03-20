@@ -1,0 +1,5 @@
+- git:
+   repo: "{{repo}}"
+   dest: "{{dest}}"
+   update: yes
+   force: yes

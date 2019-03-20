@@ -1,0 +1,4 @@
+- name: Change Default route and install UCSMSDK
+  hosts: ubuntu-main
+  roles:
+     - {role: git, repo: "http://10.10.80.200:3000/cisco/AIworkshop", dest: "/home/cisco/AIworkshop"}

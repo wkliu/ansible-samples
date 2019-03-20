@@ -1,0 +1,6 @@
+- name: Checking the course environment
+  hosts: ubuntu-servers
+  roles:
+     - { role: deleteDIR, path: "/home/cisco/TW-net-prog-workshop"}
+     - { role: deleteDIR, path: "/home/cisco/.ssh"}
+

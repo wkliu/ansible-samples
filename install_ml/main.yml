@@ -1,0 +1,19 @@
+- name: Change Default route and install UCSMSDK
+  hosts: ubuntu-main2
+  vars:
+     gateway: 10.10.80.253
+     dns: 8.8.8.8
+  roles:
+     - {role: createfile, src: "./interfaces.j2", dest: "/etc/network/interfaces"}
+     - role: re-service
+     - {role: pip, package: jupyter}
+     - {role: pip, package: tensorflow==1.5}
+     - {role: pip, package: matplotlib}
+- name: Change Default route to original setting
+  hosts: ubuntu-main2
+  vars:
+     gateway: 10.10.80.1
+     dns: 64.104.123.145
+  roles:
+     - {role: createfile, src: "./interfaces.j2", dest: "/etc/network/interfaces"}
+     - role: re-service 
